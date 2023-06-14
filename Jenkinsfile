@@ -7,7 +7,7 @@ node {
             sh 'mvn test'
             junit 'target/surefire-reports/*.xml'
         }
-	stage('Deliver') {
+	stage('Deploy') {
             sh './jenkins/scripts/deliver.sh'
         }
     }
